@@ -994,7 +994,14 @@ section {padding:115px 0}
  *,*:before,*:after {scroll-behavior:auto!important; animation:none!important;transition:none!important}
 }
 
-  </style>
+  
+.video-artboard {position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;text-align:center;background:#ccd6d2;color:#18241e;font:700 clamp(2rem,5vw,5.5rem)/.95 var(--font-display);letter-spacing:-.08em;flex-direction:column}
+.video-artboard span {font-size:2rem;letter-spacing:0;color:#d9492f;margin-top:20px}
+.modal-item iframe {width:100%;height:auto;aspect-ratio:16/9;border:0;display:block;background:#111}
+.drive-watch {display:block;padding:12px 14px;font-weight:700;color:#d9492f;text-decoration:underline;font-size:.85rem}
+.work-card .work-media img {position:relative;z-index:2}
+.work-card .work-media .media-fallback {z-index:1}
+</style>
 </head>
 <body>
   <div class="noise-overlay"></div>
@@ -1081,7 +1088,7 @@ section {padding:115px 0}
         <article class="work-card featured reveal" data-category="branding motion web" data-project="mycare">
           <div class="work-media">
             <span class="media-type-pill">Brand + Web + Motion</span>
-            <img src="assets/images/mycare-brand.jpg" alt="MyCare Home Healthcare Brand Identity" onload="this.nextElementSibling.classList.add('has-media')" onerror="this.style.display='none'" />
+            <img src="assets/images/mycare-nursing.png" alt="MyCare Home Healthcare Brand Identity" onload="this.nextElementSibling.classList.add('has-media')" onerror="this.style.display='none'" />
             <div class="media-fallback">
               <span class="fallback-badge">Healthcare · Dubai, UAE</span>
               <div class="fallback-title">MyCare Home<br />Healthcare</div>
@@ -1111,7 +1118,7 @@ section {padding:115px 0}
         <article class="work-card reveal" data-category="motion" data-project="waycup-motion">
           <div class="work-media">
             <span class="media-type-pill">6 Motion Reels</span>
-            <video src="assets/videos/waycup-espresso-split.mp4" autoplay muted loop playsinline onloadeddata="this.nextElementSibling.classList.add('has-media')" onerror="this.style.display='none'"></video>
+            <img src="assets/images/waycup-ube.png" alt="Waycup café campaign" onload="this.nextElementSibling.classList.add('has-media')" />
             <div class="media-fallback">
               <span class="fallback-badge">Motion &amp; Video</span>
               <div class="fallback-title">Waycup<br />Kinetic Reels</div>
@@ -1140,7 +1147,7 @@ section {padding:115px 0}
         <article class="work-card reveal" data-category="branding" data-project="waycup-social">
           <div class="work-media">
             <span class="media-type-pill">8 Campaign Posters</span>
-            <img src="assets/images/waycup-ube.jpg" alt="Waycup UBE Campaign" onload="this.nextElementSibling.classList.add('has-media')" onerror="this.style.display='none'" />
+            <img src="assets/images/waycup-ube.png" alt="Waycup UBE Campaign" onload="this.nextElementSibling.classList.add('has-media')" onerror="this.style.display='none'" />
             <div class="media-fallback">
               <span class="fallback-badge">Product Compositing</span>
               <div class="fallback-title">Waycup<br />Social Campaigns</div>
@@ -1169,7 +1176,7 @@ section {padding:115px 0}
         <article class="work-card reveal" data-category="motion" data-project="proconnect">
           <div class="work-media">
             <span class="media-type-pill">Explainer Film</span>
-            <video src="assets/videos/proconnect-uae.mp4" autoplay muted loop playsinline onloadeddata="this.nextElementSibling.classList.add('has-media')" onerror="this.style.display='none'"></video>
+            <div class="video-artboard" aria-hidden="true">PROCONNECT<br>IN MOTION<span>▶</span></div>
             <div class="media-fallback">
               <span class="fallback-badge">2D Vector Animation</span>
               <div class="fallback-title">Proconnect<br />UAE Recruitment</div>
@@ -1198,7 +1205,7 @@ section {padding:115px 0}
         <article class="work-card reveal" data-category="web" data-project="mycare-web">
           <div class="work-media">
             <span class="media-type-pill">Website UI/UX</span>
-            <img src="assets/images/mycare-web-1.jpg" alt="MyCarehealth.ae Web Design" onload="this.nextElementSibling.classList.add('has-media')" onerror="this.style.display='none'" />
+            <img src="assets/images/mycare-nursing.png" alt="MyCarehealth.ae Web Design" onload="this.nextElementSibling.classList.add('has-media')" onerror="this.style.display='none'" />
             <div class="media-fallback">
               <span class="fallback-badge">Web &amp; App Showcase</span>
               <div class="fallback-title">MyCareHealth.ae<br />Digital Experience</div>
@@ -1227,7 +1234,7 @@ section {padding:115px 0}
         <article class="work-card reveal" data-category="web branding" data-project="golden-sands">
           <div class="work-media">
             <span class="media-type-pill">Print &amp; Art Direction</span>
-            <img src="assets/images/golden-sands.jpg" alt="Golden Sands Hotel Print & Photography" onload="this.nextElementSibling.classList.add('has-media')" onerror="this.style.display='none'" />
+            
             <div class="media-fallback">
               <span class="fallback-badge">Hospitality · 2024–2025</span>
               <div class="fallback-title">Golden Sands<br />Hotel Dubai</div>
@@ -1468,16 +1475,16 @@ section {padding:115px 0}
         title: "Healthcare Brand, Campaigns & Reels",
         desc: "Led visual communication across brand identity guidelines (#2a2b44 / #474972 / #9091aa), medical social campaigns (Ramadan, Peptide Therapy, Epithalon, Senior Care, Valentine's), and motion reels.",
         items: [
-          { type: "img", src: "assets/images/mycare-brand.jpg", caption: "MyCare Brand Guidelines, Typography & Scrubs Mockup" },
-          { type: "img", src: "assets/images/mycare-ramadan-1.jpg", caption: "Ramadan Mubarak Greeting & Gold Curve Visual" },
-          { type: "img", src: "assets/images/mycare-ramadan-appetite.jpg", caption: "The Ramadan Appetite Support Program" },
-          { type: "img", src: "assets/images/mycare-valentine-iv.jpg", caption: "Valentine's IV Therapy — Feel The Difference From Within" },
-          { type: "img", src: "assets/images/mycare-epithalon.jpg", caption: "Peptide Therapy — Epithalon Key Visual" },
-          { type: "img", src: "assets/images/mycare-home-nursing.jpg", caption: "Care That Feels Like Home — Home Nursing Campaign" },
-          { type: "video", src: "assets/videos/mycare-nursing-levels.mp4", caption: "Doctor-Hosted Reel: 3 Levels of Home Nursing Care" },
-          { type: "video", src: "assets/videos/mycare-weight-loss.mp4", caption: "Metabolic Weight Loss & GLP-1 Kinetic Typography Reel" },
-          { type: "video", src: "assets/videos/mycare-explainer-v1.mp4", caption: "2D Vector Motion Explainer: Home Nursing is Essential" },
-          { type: "video", src: "assets/videos/mycare-qna-ui.mp4", caption: "UI Chat Animation Reel: QNAs with MyCare User" }
+          { type: "img", src: "assets/images/mycare-nursing.png", caption: "MyCare Brand Guidelines, Typography & Scrubs Mockup" },
+          { type: "img", src: "assets/images/mycare-ramadan.png", caption: "Ramadan Mubarak Greeting & Gold Curve Visual" },
+          { type: "img", src: "assets/images/mycare-appetite.png", caption: "The Ramadan Appetite Support Program" },
+          { type: "img", src: "assets/images/mycare-valentine-iv.png", caption: "Valentine's IV Therapy — Feel The Difference From Within" },
+          { type: "img", src: "assets/images/mycare-epithalon.png", caption: "Peptide Therapy — Epithalon Key Visual" },
+          { type: "img", src: "assets/images/mycare-nursing.png", caption: "Care That Feels Like Home — Home Nursing Campaign" },
+          { type: "drive", src: "https://drive.google.com/file/d/1TzLkmYw4sOuqzdXsSywtbxqF1aixxoZM/preview", view: "https://drive.google.com/file/d/1TzLkmYw4sOuqzdXsSywtbxqF1aixxoZM/view", caption: "Doctor-Hosted Reel: 3 Levels of Home Nursing Care" },
+          { type: "drive", src: "https://drive.google.com/file/d/1hvudORHilyYGAkTqswf-ze8v9y6KhN3M/preview", view: "https://drive.google.com/file/d/1hvudORHilyYGAkTqswf-ze8v9y6KhN3M/view", caption: "Metabolic Weight Loss & GLP-1 Kinetic Typography Reel" },
+          { type: "drive", src: "https://drive.google.com/file/d/1RmFFqpE1xazeH-PKduwkkor8y-S56m_c/preview", view: "https://drive.google.com/file/d/1RmFFqpE1xazeH-PKduwkkor8y-S56m_c/view", caption: "2D Vector Motion Explainer: Home Nursing is Essential" },
+          { type: "drive", src: "https://drive.google.com/file/d/1aSY3Q8wBtEV6GuHI4BAT5rBpMMdLxhZu/preview", view: "https://drive.google.com/file/d/1aSY3Q8wBtEV6GuHI4BAT5rBpMMdLxhZu/view", caption: "UI Chat Animation Reel: QNAs with MyCare User" }
         ]
       },
       "waycup-motion": {
@@ -1485,13 +1492,13 @@ section {padding:115px 0}
         title: "Espresso & Boba Kinetic Reels",
         desc: "High-energy vertical social reels combining barista macro footage, split-screen pacing, 2D character line art, and playful cheesecake flavor roulette animations.",
         items: [
-          { type: "video", src: "assets/videos/waycup-espresso-split.mp4", caption: "Split-Screen Espresso Extraction Reel" },
-          { type: "video", src: "assets/videos/waycup-spin-pick.mp4", caption: "Spin & Pick Your Cheesecake Roulette Motion Graphic" },
-          { type: "video", src: "assets/videos/waycup-taro-build.mp4", caption: "Cheesecake Pearl Taro Layered Build Animation" },
-          { type: "video", src: "assets/videos/waycup-barista-lineart.mp4", caption: "Welcome to Waycup — 2D Line-Art Character Animation" },
-          { type: "video", src: "assets/videos/waycup-precision-brew.mp4", caption: "Art in Every Cup — Espresso & Latte Art Reel" },
-          { type: "video", src: "assets/videos/waycup-morph-drinks.mp4", caption: "Matcha, Taro & Brown Sugar Morph Transition Reel" },
-          { type: "video", src: "assets/videos/waycup-now-open.mp4", caption: "Waycup Grand Launch — 'We Are Open' Macro Reel" }
+          { type: "drive", src: "https://drive.google.com/file/d/1pseZkt5wyShqW9yJ9vSsXC_Ja750utD4/preview", view: "https://drive.google.com/file/d/1pseZkt5wyShqW9yJ9vSsXC_Ja750utD4/view", caption: "Split-Screen Espresso Extraction Reel" },
+          { type: "drive", src: "https://drive.google.com/file/d/1Vf_Rj1aCrpe9uIuymr5zCSapTNj_Y6Ql/preview", view: "https://drive.google.com/file/d/1Vf_Rj1aCrpe9uIuymr5zCSapTNj_Y6Ql/view", caption: "Spin & Pick Your Cheesecake Roulette Motion Graphic" },
+          { type: "drive", src: "https://drive.google.com/file/d/1Aaj8T8_c9zrrPmdjLt2xKsvNgPhd7Bk9/preview", view: "https://drive.google.com/file/d/1Aaj8T8_c9zrrPmdjLt2xKsvNgPhd7Bk9/view", caption: "Cheesecake Pearl Taro Layered Build Animation" },
+          { type: "drive", src: "https://drive.google.com/file/d/1mwWHT9en336JklqcrJU_CdVBDSV9esOh/preview", view: "https://drive.google.com/file/d/1mwWHT9en336JklqcrJU_CdVBDSV9esOh/view", caption: "Welcome to Waycup — 2D Line-Art Character Animation" },
+          { type: "drive", src: "https://drive.google.com/file/d/1BDXgnEUJfLbHqhxRRa4VXobFU4Rn7N-J/preview", view: "https://drive.google.com/file/d/1BDXgnEUJfLbHqhxRRa4VXobFU4Rn7N-J/view", caption: "Art in Every Cup — Espresso & Latte Art Reel" },
+          { type: "drive", src: "https://drive.google.com/file/d/1BDXgnEUJfLbHqhxRRa4VXobFU4Rn7N-J/preview", view: "https://drive.google.com/file/d/1BDXgnEUJfLbHqhxRRa4VXobFU4Rn7N-J/view", caption: "Matcha, Taro & Brown Sugar Morph Transition Reel" },
+          { type: "drive", src: "https://drive.google.com/file/d/14DezJkH-QCVil5HO1M5-t_frxbVNP-hC/preview", view: "https://drive.google.com/file/d/14DezJkH-QCVil5HO1M5-t_frxbVNP-hC/view", caption: "Waycup Grand Launch — 'We Are Open' Macro Reel" }
         ]
       },
       "waycup-social": {
@@ -1499,13 +1506,13 @@ section {padding:115px 0}
         title: "Product Compositing & Social Posters",
         desc: "Vibrant beverage and food key visuals crafted for Instagram & in-store screens, balancing playful display typography with rich product textures.",
         items: [
-          { type: "img", src: "assets/images/waycup-ube.jpg", caption: "Discover the Taste of UBE — Coconut Water & Bliss Cheesecake" },
-          { type: "img", src: "assets/images/waycup-oreo-bliss.jpg", caption: "Oreo Cheesecake Bliss — Dynamic Sticker & Typography" },
-          { type: "img", src: "assets/images/waycup-taro-magic.jpg", caption: "Sip' The Magic Taro — Hand-Drawn Illustration + Product" },
-          { type: "img", src: "assets/images/waycup-frappe-peak.jpg", caption: "Peak of Frappé — Photomanipulation" },
-          { type: "img", src: "assets/images/waycup-coffee-matcha.jpg", caption: "Pick Your Potion — Coffee or Matcha" },
-          { type: "img", src: "assets/images/waycup-empanada.jpg", caption: "Giant Chicken Empanada — Editorial Minimal Shadow Study" },
-          { type: "img", src: "assets/images/waycup-summer-deal.jpg", caption: "The Ultimate Summer Deal — AED 15 Pearl Milk Tea" }
+          { type: "img", src: "assets/images/waycup-ube.png", caption: "Discover the Taste of UBE — Coconut Water & Bliss Cheesecake" },
+          { type: "img", src: "assets/images/waycup-oreo-cheese.png", caption: "Oreo Cheesecake Bliss — Dynamic Sticker & Typography" },
+          { type: "img", src: "assets/images/waycup-taro.png", caption: "Sip' The Magic Taro — Hand-Drawn Illustration + Product" },
+          { type: "img", src: "assets/images/waycup-frappe.png", caption: "Peak of Frappé — Photomanipulation" },
+          { type: "img", src: "assets/images/waycup-coffee-matcha.png", caption: "Pick Your Potion — Coffee or Matcha" },
+          { type: "img", src: "assets/images/waycup-empanada.png", caption: "Giant Chicken Empanada — Editorial Minimal Shadow Study" },
+          { type: "img", src: "assets/images/waycup-oreo.png", caption: "The Ultimate Summer Deal — AED 15 Pearl Milk Tea" }
         ]
       },
       "proconnect": {
@@ -1513,7 +1520,7 @@ section {padding:115px 0}
         title: "A New Beginning — UAE Career Explainer",
         desc: "2D vector motion explainer tailored for Filipino healthcare, engineering, and IT professionals moving to the UAE, featuring custom skyline illustrations and bilingual kinetic typography.",
         items: [
-          { type: "video", src: "assets/videos/proconnect-uae.mp4", caption: "Full 2D Motion Graphics Explainer (English & Tagalog)" }
+          { type: "drive", src: "https://drive.google.com/file/d/1MEUfRxBQfghFsWfGYlCD7eSsaxVVxBrD/preview", view: "https://drive.google.com/file/d/1MEUfRxBQfghFsWfGYlCD7eSsaxVVxBrD/view", caption: "Full 2D Motion Graphics Explainer (English & Tagalog)" }
         ]
       },
       "mycare-web": {
@@ -1521,8 +1528,8 @@ section {padding:115px 0}
         title: "MyCareHealth.ae & Serene Senior Living",
         desc: "Responsive web design for desktop and mobile covering On-Demand Care, HealthPass App Download, Nox Medical Sleep Study At Home, Serene Senior Living Suites, and Contact/About pages.",
         items: [
-          { type: "img", src: "assets/images/mycare-web-1.jpg", caption: "Homepage: Compassionate Care, HealthPass App & Serene Living" },
-          { type: "img", src: "assets/images/mycare-web-2.jpg", caption: "Contact Us, Google Maps Integration & About Us Mission" }
+          { type: "img", src: "assets/images/mycare-nursing.png", caption: "MyCare visual campaign reference" },
+          { type: "img", src: "assets/images/mycare-cpt.png", caption: "MyCare campaign reference image" }
         ]
       },
       "golden-sands": {
@@ -1530,7 +1537,7 @@ section {padding:115px 0}
         title: "Hospitality Art Direction & Print Design",
         desc: "On-site art direction for hotel rooms, dining, and facilities photography, followed by high-end retouching and cohesive editorial print layouts for menus, brochures, and guest collateral.",
         items: [
-          { type: "img", src: "assets/images/golden-sands.jpg", caption: "Menus, Brochures & In-Room Print Collateral (Add your photo here)" }
+          { type: "img", src: "assets/images/golden-sands.jpg", caption: "Hotel photography and print samples available on request" }
         ]
       }
     };
@@ -1554,9 +1561,7 @@ section {padding:115px 0}
 
         modalGallery.innerHTML = data.items.map(item => `
           <div class="modal-item">
-            ${item.type === 'video'
-              ? `<video src="${item.src}" controls playsinline preload="metadata"></video>`
-              : `<img src="${item.src}" alt="${item.caption}" onerror="this.outerHTML='<div style=\\'padding:48px 20px;text-align:center;color:#9a968e;font-size:0.85rem;\\'>Add file:<br><code style=\\'color:#e5a93c\\'>${item.src}</code></div>'" />`
+            ${item.type === 'drive' ? `<iframe src="${item.src}" title="${item.caption}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe><a class="drive-watch" target="_blank" rel="noopener" href="${item.view}">Watch in Google Drive ↗</a>` : `<img src="${item.src}" alt="${item.caption}" loading="lazy" />`}
             }
             <div class="modal-caption">${item.caption}</div>
           </div>

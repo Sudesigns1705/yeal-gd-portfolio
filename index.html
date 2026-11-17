@@ -9,7 +9,7 @@
   <!-- Google Fonts: Editorial Serif + Modern Grotesk -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -874,6 +874,126 @@
       opacity: 1;
       transform: translateY(0);
     }
+  
+/* ——— Y M / Art-directed portfolio refresh ——— */
+:root {
+  --bg: #f5f3ed;
+  --bg-elevated: #eae8e1;
+  --bg-card: #ffffff;
+  --text: #191b1a;
+  --text-muted: #5f635e;
+  --accent: #d9492f;
+  --accent-soft: rgba(217,73,47,.12);
+  --border: rgba(25,27,26,.18);
+  --font-display: 'Space Grotesk', Arial, sans-serif;
+  --font-sans: 'DM Sans', Arial, sans-serif;
+}
+html, body {background:var(--bg); color:var(--text)}
+body {font-size:16px}
+.noise-overlay {opacity:.018}
+header {padding:24px 0}
+header.scrolled {background:rgba(245,243,237,.93)}
+.brand-mark {font:700 1.25rem/1 var(--font-display);letter-spacing:-.045em}
+.brand-mark span {font-style:normal; color:var(--accent)}
+nav a {font-weight:700;letter-spacing:.04em;color:var(--text);font-size:.8rem}
+.nav-cta {border:1px solid var(--text); border-radius:3px}
+.nav-cta:hover {background:var(--text);border-color:var(--text);color:white!important}
+.container {width:min(1450px,91vw)}
+.hero {min-height: min(890px,100svh);justify-content:center; padding:150px 0 94px;position:relative;overflow:hidden}
+.hero:before {content:"";position:absolute;top:10%;right:-9%;width:min(38vw,580px);aspect-ratio:1;background:#e3e1d9;border-radius:50%;pointer-events:none}
+.hero:after {content:"✳";position:absolute;right:11%;top:16%;font-size:clamp(80px,12vw,190px);line-height:1;color:var(--accent);transform:rotate(-13deg);pointer-events:none}
+.hero .container {position:relative;z-index:1}
+.hero-eyebrow {color:var(--text);font-size:.78rem;letter-spacing:.08em;font-weight:700;margin-bottom:35px}
+.status-dot {background:var(--accent);box-shadow:none}
+.hero-title {font-size:clamp(5rem,12.6vw,13.5rem);font-weight:700;letter-spacing:-.097em;line-height:.83;text-transform:uppercase;margin-bottom:70px;max-width:1200px}
+.hero-title .italic {color:var(--accent);font-style:normal}
+.hero-bottom {border-top:2px solid var(--text);grid-template-columns:1.3fr .7fr; padding-top:30px}
+.hero-bio {color:var(--text);font-size:clamp(1.04rem,1.7vw,1.45rem);max-width:56ch;line-height:1.45}
+.hero-meta {gap:48px}
+.hero-stat-num {font:700 clamp(2.8rem,4vw,4rem)/.95 var(--font-display);letter-spacing:-.09em}
+.hero-stat-label {color:var(--text-muted);font-weight:700;letter-spacing:.04em}
+.marquee-wrap {background:var(--text);border:0;padding:20px 0}
+.marquee-item {font:600 1.38rem/1.2 var(--font-display);font-style:normal;color:#f5f3ed;letter-spacing:-.04em}
+.marquee-item span.star {color:#ff7e62}
+section {padding:115px 0}
+.section-tag {font-weight:700;letter-spacing:.08em;color:var(--accent)}
+.section-title {font-weight:700;font-size:clamp(3.8rem,7vw,7.2rem);line-height:.93;letter-spacing:-.082em;text-transform:uppercase}
+.section-head {align-items:end;margin-bottom:48px}
+.filter-btn {border:1px solid var(--text);color:var(--text);border-radius:3px;font-weight:700;letter-spacing:.02em;padding:10px 14px}
+.filter-btn.active,.filter-btn:hover {background:var(--text);color:var(--bg)}
+.works-grid {gap:24px}
+.work-card {border:0;border-radius:0;background:transparent;box-shadow:none;gap:0;transform:none!important}
+.work-card.featured {display:flex;flex-direction:column;grid-column:span 12}
+.work-media {aspect-ratio:16/10;border-radius:0; background:#d9dbd6}
+.work-card.featured .work-media {aspect-ratio: 16/7;min-height:350px}
+.work-card:hover .work-media img,.work-card:hover .work-media video {transform:scale(1.055)}
+.media-fallback {background:#e6e5de;padding:clamp(22px,4vw,65px);color:var(--text);overflow:hidden}
+.media-fallback:after {content:"↗";position:absolute;bottom:-.14em;right:.045em;font:700 clamp(8rem,21vw,25rem)/1 var(--font-display);letter-spacing:-.12em;opacity:.1}
+.work-card:nth-child(2) .media-fallback {background:#d4e0dc}
+.work-card:nth-child(3) .media-fallback {background:#f1cab5}
+.work-card:nth-child(4) .media-fallback {background:#d6d5ed}
+.work-card:nth-child(5) .media-fallback {background:#d8e4e8}
+.work-card:nth-child(6) .media-fallback {background:#e6d4ba}
+.fallback-badge {font:700 .75rem var(--font-sans);letter-spacing:.08em;border-radius:3px;background:var(--text);color:#fff}
+.fallback-title {font:700 clamp(2.8rem,7vw,7rem)/.92 var(--font-display);letter-spacing:-.085em;position:relative;z-index:1;color:#20221f}
+.media-type-pill {background:var(--text);border:0;color:#fff;border-radius:3px;font-weight:700}
+.work-body {padding:22px 0 40px;gap:10px}
+.work-card.featured .work-body {padding:24px 0 48px}
+.work-meta {color:var(--accent);font-weight:700;letter-spacing:.04em}
+.work-title {font:700 clamp(1.7rem,3vw,3.2rem)/1 var(--font-display);letter-spacing:-.065em;margin-top:10px}
+.work-desc {color:var(--text-muted);max-width:68ch;line-height:1.55}
+.work-tags {border-top:1px solid var(--border);margin-top:12px}
+.work-tags span {background:var(--bg-elevated);color:var(--text);border-radius:3px}
+.about-grid {grid-template-columns:.74fr 1.26fr;gap:8vw}
+.profile-card {background:#eae8e1;border:0;border-radius:0}
+.profile-photo-wrap {border-radius:0}
+.timeline-item {border-top:1px solid var(--text);grid-template-columns:125px 1fr}
+.timeline-role {font:700 clamp(1.5rem,2.5vw,2.35rem)/1.07 var(--font-display);letter-spacing:-.06em}
+.timeline-company {font-weight:700;letter-spacing:.04em}
+.timeline-desc {color:var(--text-muted)}
+.edu-card {border:1px solid var(--border);border-radius:0;background:transparent}
+.edu-card h4 {font:700 1.3rem var(--font-display);letter-spacing:-.04em}
+.contact-section {background:var(--text);color:#f5f3ed;padding-top:115px}
+.contact-section .section-tag {color:#ff826a}
+.contact-big {font:700 clamp(4.3rem,10vw,10rem)/.88 var(--font-display);letter-spacing:-.087em;text-transform:uppercase;max-width:1100px}
+.contact-big span {color:#ff826a;font-style:normal}
+.btn-primary {background:#ff826a;border-radius:3px;font-weight:700}
+.btn-outline {color:#f5f3ed;border:1px solid #f5f3ed;border-radius:3px;font-weight:700}
+.footer-bottom {color:#c2c1bd;border-top:1px solid rgba(255,255,255,.25)}
+.modal-backdrop {background:rgba(18,18,18,.8)}
+.modal-panel {background:var(--bg);border-radius:0;border:0}
+.modal-close {color:var(--text);background:var(--bg)}
+.modal-item {border-radius:0;background:white}
+.modal-caption {color:var(--text-muted)}
+.reveal {opacity:1;transform:none}
+.cursor-dot {background:var(--accent)}
+.cursor-ring {border-color:var(--text)}
+.cursor-ring.active {color:white}
+@media (max-width:900px){
+ .hero {min-height:700px;padding:140px 0 65px}
+ .hero:before {width:56vw;top:15%;right:-20%}
+ .hero:after {right:7%;top:15%;font-size:13vw}
+ .hero-title {font-size:clamp(4.1rem,15vw,8rem);margin-bottom:54px}
+ .hero-bottom {grid-template-columns:1fr;gap:25px}
+ .hero-meta {justify-content:flex-start;text-align:left}
+ .work-card.featured .work-media {aspect-ratio:4/3;min-height:0}
+ .about-grid {grid-template-columns:1fr}
+}
+@media (max-width:600px) {
+ .hero-title {font-size:clamp(3.6rem,16vw,6rem)}
+ .hero:after {top:23%}
+ .section-title {font-size:clamp(3.2rem,13vw,5rem)}
+ section {padding:75px 0}
+ .hero-meta {gap:32px}
+ .work-media,.work-card.featured .work-media {aspect-ratio: 4/3}
+ .fallback-title {font-size:clamp(2.5rem,11vw,5rem)}
+ .contact-big {font-size:clamp(3.5rem,13vw,6rem)}
+ .edu-grid {grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce) {
+ *,*:before,*:after {scroll-behavior:auto!important; animation:none!important;transition:none!important}
+}
+
   </style>
 </head>
 <body>
@@ -901,12 +1021,12 @@
         Available for Senior Roles & Creative Direction · Dubai, UAE
       </div>
       <h1 class="hero-title">
-        Visual Systems<br />
-        & <span class="italic">Kinetic</span> Motion.
+        DESIGN IN<br />
+        <span class="italic">MOTION.</span>
       </h1>
       <div class="hero-bottom">
         <p class="hero-bio">
-          I’m <strong>Yael Minthein</strong> — a Senior Graphic &amp; Motion Designer with 6+ years crafting brand identities, social campaigns, web experiences, and motion reels across healthcare, hospitality, and F&amp;B in the UAE.
+          I’m <strong>Yael Minthein</strong>, a Dubai-based graphic and motion designer creating brands, campaigns, digital experiences and moving images with purpose.
         </p>
         <div class="hero-meta">
           <div>
@@ -945,7 +1065,7 @@
     <div class="container">
       <div class="section-head reveal">
         <div>
-          <span class="section-tag">Portfolio Archive (2017 — 2026)</span>
+          <span class="section-tag">Selected projects / 2017 — 2026</span>
           <h2 class="section-title">Selected Works</h2>
         </div>
         <div class="filter-bar">

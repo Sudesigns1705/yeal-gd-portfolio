@@ -23,6 +23,17 @@ jobs:
     steps:
       - name: Checkout portfolio
         uses: actions/checkout@v4
+      - name: Validate portfolio JavaScript
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const vm = require('vm');
+          const page = fs.readFileSync('index.html', 'utf8');
+          const matches = [...page.matchAll(/<script(?:\\s[^>]*)?>([\\s\\S]*?)<\\/script>/g)];
+          if (!matches.length) throw new Error('No inline JavaScript found');
+          for (const [, source] of matches) new vm.Script(source);
+          console.log('Validated', matches.length, 'inline script(s)');
+          NODE
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
         with:

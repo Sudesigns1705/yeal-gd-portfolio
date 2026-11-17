@@ -162,6 +162,124 @@ button,a{font:inherit}a{color:inherit;text-decoration:none}button{cursor:pointer
 .motion-side{grid-template-columns:1fr}.motion-tile{min-height:165px}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* FINAL ART-DIRECTION PASS — black/white canvas, vivid orange accents */
+:root{--paper:#fff;--ink:#101010;--orange:#ff642e;--lime:#ff642e}
+body{background:#fff}
+.logo b,.logo span{color:var(--orange)!important}
+.hero h1 em,.motion-head h2 b{color:var(--orange)}
+.blink{background:var(--orange);box-shadow:0 0 14px rgba(255,100,46,.43)}
+.hero-circle{border-color:rgba(255,100,46,.5)}
+.hero-circle:after{color:var(--orange)}
+.hero-background{background:radial-gradient(circle at 76% 45%,#252322 0%,#101010 48%,#101010 86%)}
+.marquee{background:var(--orange);color:#111}
+.marquee-track i{color:#fff}
+.intro{background:#fff}
+.intro-head span,.about h2 em{color:var(--orange)}
+.intro-end a:hover{background:#111;color:#fff}
+.project-section{background:#fff;color:#111}
+#project-mycare,#project-proconnect{background:#111;color:#fff}
+#project-waycup,#project-digital{background:#fff;color:#111}
+#project-mycare .project-top,#project-proconnect .project-top{border-top-color:rgba(255,255,255,.45)}
+#project-mycare .round-arrow,#project-proconnect .round-arrow{background:#fff;color:#111}
+#project-waycup .round-arrow,#project-digital .round-arrow{background:#111;color:#fff}
+#project-mycare .visual-stage{background:#111;color:#fff}
+#project-mycare .stage-name{color:#fff;font-size:clamp(5.5rem,17vw,18rem);top:5%;left:4%;letter-spacing:-.11em}
+#project-mycare .stage-caption{color:#fff;left:4%;bottom:3%}
+#project-mycare .stage-sticker{background:var(--orange);color:#111;right:6%;top:27%;width:clamp(120px,12vw,185px);height:clamp(120px,12vw,185px);font-size:clamp(1.2rem,2.3vw,2.5rem)}
+#project-waycup .waycup-stage{background:#ff804f}
+#project-waycup .waycup-giant{color:#311912}
+#project-waycup .waycup-giant span{color:#fff}
+#project-proconnect .video-stage{background:#f2f2ed;color:#141414}
+#project-proconnect .film-type{color:#151515}
+#project-proconnect .film-type i{color:var(--orange)}
+#project-proconnect .video-preview{background:var(--orange)}
+#project-digital .digital-stage{background:#e8e8e4;color:#111}
+#project-digital .digital-type{color:#111}
+#project-digital .digital-type span{color:var(--orange)}
+.about{background:#fff}
+.motion-band{background:#111}
+.motion-tile.one{background:var(--orange)}
+.motion-tile.two{background:#f3f1eb}
+.contact{background:#111;color:#fff}
+.contact h2 span{color:var(--orange)}
+.contact-cta{background:var(--orange);color:#111}
+.foot{border-color:#555}
+.case-panel{background:#fff}
+/* The campaign posters contain important typography: show the entire artwork. */
+.hero-poster,.art,.cup,.digital-art,.case-item img{
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#fff;
+}
+.hero-poster,.art,.cup{padding:6px;border:6px solid #fff}
+.case-item img{aspect-ratio:auto;max-height:640px;width:100%;height:auto}
+.case-item{background:#f2f2f2}
+.hero-posters{right:3%;width:clamp(350px,39vw,580px)}
+.hero-poster{height:68%;width:50%}
+.hp-1{right:22%;top:5%}.hp-2{left:7%;top:28%}.hp-3{right:0;top:34%}
+.stage-composition,.waycup-stack{overflow:visible}
+.art{height:53%;width:24%;max-width:370px}
+.art-one{left:9%;bottom:10%;transform:rotate(-7deg)}
+.art-two{left:38%;bottom:8%;height:59%;width:25%;transform:rotate(4deg)}
+.art-three{right:8%;bottom:10%;transform:rotate(7deg)}
+.cup{width:25%;height:55%}
+.cup-one{left:9%;bottom:12%;transform:rotate(-6deg)}
+.cup-two{left:38%;bottom:8%;transform:rotate(5deg)}
+.cup-three{right:9%;bottom:12%;transform:rotate(-6deg)}
+.digital-device img{width:100%;height:100%;object-fit:contain;background:white}
+.visual-open{background:#fff;color:#111}
+@media(max-width:760px){
+ .hero,.hero-content{min-height:770px;min-height:100svh}
+ .hero-content{padding-top:115px;padding-bottom:120px}
+ .hero h1{font-size:clamp(3.6rem,14.7vw,6.8rem);line-height:.9;max-width:95%;letter-spacing:-.095em;margin:45px 0 20px}
+ .hero-posters{width:73vw;height:345px;right:-8%;top:38%}
+ .hero-poster{width:54%;height:69%;padding:3px;border-width:4px}
+ .hp-1{right:27%;top:2%}.hp-2{left:5%;top:30%}.hp-3{right:4%;top:36%}
+ .hero-circle{width:55vw;top:39%;right:-8%}
+ .hero-bottom{bottom:76px;max-width:94%}
+ .hero-bottom p{font-size:.9rem;max-width:340px}
+ .project-top{padding:16px 0 22px}
+ .visual-stage{height:510px}
+ #project-mycare .stage-name{font-size:22vw;top:9%;left:4%}
+ #project-mycare .stage-sticker{width:90px;height:90px;top:28%;right:5%;font-size:1rem}
+ .art,.cup{padding:3px;border-width:4px;box-shadow:0 10px 20px #0003}
+ .art-one{left:4%;bottom:21%;width:31%;height:42%;transform:rotate(-5deg)}
+ .art-two{left:35%;bottom:16%;width:33%;height:47%;transform:rotate(3deg)}
+ .art-three{right:1%;bottom:21%;width:30%;height:42%;transform:rotate(5deg)}
+ .cup-one{left:4%;bottom:23%;width:31%;height:42%;transform:rotate(-5deg)}
+ .cup-two{left:35%;bottom:17%;width:33%;height:47%;transform:rotate(3deg)}
+ .cup-three{right:1%;bottom:23%;width:30%;height:42%;transform:rotate(5deg)}
+ .waycup-giant{font-size:24vw}
+ .project-footer h3{font-size:clamp(3.8rem,14vw,6.8rem)}
+ .project-footer{gap:15px}
+ .intro-head{font-size:clamp(3.15rem,10vw,6rem)}
+ .intro-end p{font-size:1.06rem}
+ .digital-type{font-size:17vw}
+ .digital-device{width:50%;right:16%}
+ .film-type{font-size:18vw;line-height:.86}
+ .video-preview{width:170px;right:10%;top:53%}
+ .case-panel{padding:18px}.case-title{font-size:clamp(2.8rem,11vw,5.5rem)}
+}
+@media(max-width:460px){
+ .hero,.hero-content{min-height:710px;min-height:100svh}
+ .hero h1{font-size:15vw}
+ .hero-posters{width:80vw;right:-13%;top:39%;height:310px}
+ .hero-bottom{bottom:69px}
+ .visual-stage{height:440px}
+ .stage-caption{font-size:.58rem}
+ #project-mycare .stage-sticker{top:31%;width:76px;height:76px;font-size:.85rem}
+ .art-one,.cup-one{bottom:22%}
+ .art-two,.cup-two{bottom:16%}
+ .art-three,.cup-three{bottom:22%}
+ .visual-open{bottom:10px;right:10px;font-size:.55rem;padding:6px 6px 6px 11px}
+ .visual-open span{width:31px;height:31px}
+ .motion-head h2{font-size:17vw}
+ .project-footer h3{font-size:13.7vw}
+ .round-arrow{width:45px;height:45px}
+ .contact h2{font-size:14vw}
+}
+
 </style>
 </head>
 <body>

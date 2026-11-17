@@ -1562,7 +1562,6 @@ section {padding:115px 0}
         modalGallery.innerHTML = data.items.map(item => `
           <div class="modal-item">
             ${item.type === 'drive' ? `<iframe src="${item.src}" title="${item.caption}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe><a class="drive-watch" target="_blank" rel="noopener" href="${item.view}">Watch in Google Drive ↗</a>` : `<img src="${item.src}" alt="${item.caption}" loading="lazy" />`}
-            }
             <div class="modal-caption">${item.caption}</div>
           </div>
         `).join('');
@@ -1575,7 +1574,7 @@ section {padding:115px 0}
     function closeProjectModal() {
       modal.classList.remove('open');
       document.body.style.overflow = '';
-      modalGallery.querySelectorAll('video').forEach(v => v.pause());
+      modalGallery.querySelectorAll('iframe').forEach(frame => { frame.src = 'about:blank'; });
     }
 
     closeModalBtn.addEventListener('click', closeProjectModal);
